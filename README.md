@@ -8,7 +8,7 @@ applications in a wide range of scenarios and architectures. Please read the
 [Overview](https://docs.spring.io/spring/docs/current/spring-framework-reference/overview.html#spring-introduction)
 section in the reference for a more complete introduction.
 
-## Code of Conduct
+## Code of Conduct   
 
 This project is governed by the [Spring Code of Conduct](CODE_OF_CONDUCT.adoc).
 By participating you are expected to uphold this code.
