@@ -22,6 +22,7 @@ import org.springframework.lang.Nullable;
 
 /**
  * BeanFactory是Spring容器的根接口
+ * 定义获取bean及bean的各种属性
  * The root interface for accessing a Spring bean container.
  * This is the basic client view of a bean container;
  * further interfaces such as {@link ListableBeanFactory} and
