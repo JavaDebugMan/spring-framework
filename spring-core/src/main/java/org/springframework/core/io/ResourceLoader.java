@@ -20,6 +20,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.ResourceUtils;
 
 /**
+ * 定义资源加载器,主要用于根据给定的资源文件地址返回对应的Resource
  * Strategy interface for loading resources (e.. class path or file system
  * resources). An {@link org.springframework.context.ApplicationContext}
  * is required to provide this functionality, plus extended
@@ -33,15 +34,17 @@ import org.springframework.util.ResourceUtils;
  * context's resource loading strategy.
  *
  * @author Juergen Hoeller
- * @since 10.03.2004
  * @see Resource
  * @see org.springframework.core.io.support.ResourcePatternResolver
  * @see org.springframework.context.ApplicationContext
  * @see org.springframework.context.ResourceLoaderAware
+ * @since 10.03.2004
  */
 public interface ResourceLoader {
 
-	/** Pseudo URL prefix for loading from the class path: "classpath:" */
+	/**
+	 * Pseudo URL prefix for loading from the class path: "classpath:"
+	 */
 	String CLASSPATH_URL_PREFIX = ResourceUtils.CLASSPATH_URL_PREFIX;
 
 
@@ -58,6 +61,7 @@ public interface ResourceLoader {
 	 * </ul>
 	 * <p>Note that a Resource handle does not imply an existing resource;
 	 * you need to invoke {@link Resource#exists} to check for existence.
+	 *
 	 * @param location the resource location
 	 * @return a corresponding Resource handle (never {@code null})
 	 * @see #CLASSPATH_URL_PREFIX
@@ -71,6 +75,7 @@ public interface ResourceLoader {
 	 * <p>Clients which need to access the ClassLoader directly can do so
 	 * in a uniform manner with the ResourceLoader, rather than relying
 	 * on the thread context ClassLoader.
+	 *
 	 * @return the ClassLoader
 	 * @see org.springframework.util.ClassUtils#getDefaultClassLoader()
 	 */
